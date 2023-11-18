@@ -6,7 +6,7 @@ import PrivatRoute from './PrivateRoute';
 import RestrictedRoute from './RestrictedRoute';
 
 import Spiner from './components/Spiner/Spiner';
-import './App.css';
+import { AppContainer } from './AppStyle';
 
 const MainPage = lazy(() => import('./page/MainPage/MainPage'));
 const LoginPage = lazy(() => import('./page/Login/Login'));
@@ -22,7 +22,7 @@ function App() {
    return isRefreshing ? (
       <Spiner />
    ) : (
-      <div className="App">
+      <AppContainer>
          <Suspense>
             <Routes>
                <Route path="/">
@@ -44,7 +44,7 @@ function App() {
                </Route>
             </Routes>
          </Suspense>
-      </div>
+      </AppContainer>
    );
 }
 
