@@ -14,7 +14,7 @@ const initialState = {
       'SURVIVAL',
       'ONLINE',
    ],
-   activeItem: 'FREE',
+   activeItem: 'ALL',
    page: 1,
 };
 

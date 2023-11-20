@@ -13,7 +13,7 @@ const MainPage = () => {
    const dispatch = useDispatch();
    const activeItem = useSelector((state) => state.gameSlice.activeItem);
    const { data, isLoading } = useGetGamesQuery({
-      genre: activeItem,
+      genre: activeItem === 'ALL' ? false : activeItem,
       page: page,
    });
 
