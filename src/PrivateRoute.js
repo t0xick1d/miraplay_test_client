@@ -8,5 +8,5 @@ export default function PrivatRoute({ component: Component, redirectTo = '/' }) 
    const isRefreshed = useSelector(selectIsRefreshing);
    const shoudRedirect = !isLoggedIn && !isRefreshed;
 
-   return false ? <Navigate to={redirectTo} /> : Component;
+   return shoudRedirect ? <Navigate to={redirectTo} /> : Component;
 }

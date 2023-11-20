@@ -9,9 +9,15 @@ import {
    UserHeader,
    Button,
 } from './HeaderStyle';
-import { ReactComponent as ReactLogo } from './start.svg';
+import { ReactComponent as ReactLogo } from '../../img/start.svg';
+import { useDispatch } from 'react-redux';
+import { logOut } from '../../redux-store/auth/operations';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+   const dispatch = useDispatch();
+   const user = useSelector((state) => state.auth.user);
+
    return (
       <HeaderContainer>
          <LogoContainer>
@@ -44,11 +50,11 @@ const Header = () => {
                      color: '#faf9f7',
                   }}
                >
-                  toxic
+                  {user.nickName}
                </div>
-               <div>hexdue@mailto.plus</div>
+               <div>{user.email}</div>
             </div>
-            <Button>Log Out</Button>
+            <Button onClick={() => dispatch(logOut())}>Log Out</Button>
          </UserHeader>
       </HeaderContainer>
    );

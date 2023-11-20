@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bg from './head-bg.png';
+import bg from '../../img/head-bg.png';
 
 export const MainContainer = styled('div')`
    background: linear-gradient(180deg, hsla(0, 0%, 9%, 0), #181818), url(${bg});
