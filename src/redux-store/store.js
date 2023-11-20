@@ -11,6 +11,8 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { authReducer } from './auth/authSlice';
+import { gameApi } from './game/gameApi';
+import gameSlice from './game/gameSliceQuery';
 
 import { setupListeners } from '@reduxjs/toolkit/query';
 
@@ -23,6 +25,8 @@ const authPersistConfig = {
 export const store = configureStore({
    reducer: {
       auth: persistReducer(authPersistConfig, authReducer),
+      gameSlice: gameSlice,
+      [gameApi.reducerPath]: gameApi.reducer,
    },
    middleware: (getDefaultMiddleware) => [
       ...getDefaultMiddleware({
@@ -30,6 +34,7 @@ export const store = configureStore({
             ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
          },
       }),
+      gameApi.middleware,
    ],
 });
 
