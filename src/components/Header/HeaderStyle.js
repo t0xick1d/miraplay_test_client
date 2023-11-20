@@ -54,7 +54,8 @@ export const Button = styled('button')({
    borderRadius: 10,
    cursor: 'pointer',
    height: 56,
-   ':hover': {
-      background: 'var(--main-green-color: #3f9c14)',
+   transition: 'var(--transitionButton)',
+   '&:hover': {
+      background: 'var(--main-green-color)',
    },
 });

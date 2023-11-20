@@ -11,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
   --mobile: 320px;
   --tablet: 768px;
   --desktop: 1200px;
+  --transitionButton: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @font-face {

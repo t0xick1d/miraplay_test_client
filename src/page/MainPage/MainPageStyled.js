@@ -6,6 +6,7 @@ export const MainContainer = styled('div')`
    background-size: cover;
    height: 650px;
    width: 100%;
+   padding: 40px;
 `;
 
 export const TittleMain = styled('div')({
@@ -17,4 +18,27 @@ export const TittleMain = styled('div')({
    textTransform: 'uppercase',
    paddingTop: 30,
    paddingeft: 20,
+});
+
+export const ButtonShowMore = styled('button')({
+   backgroundColor: '#242424',
+   border: '1px solid #454545',
+   display: 'flex',
+   justifyContent: 'center',
+   alignItems: 'center',
+   borderRadius: '20px',
+   color: 'var(--main-text-color)',
+   cursor: 'pointer',
+   fontSize: '14px',
+   fontWeight: 800,
+   height: 78,
+   lineHeight: '143%',
+   margin: '41px auto 0',
+   textTransform: 'uppercase',
+   transition: 'var(--transitionButton)',
+   width: '370px',
+   '&: hover ': {
+      backgroundColor: 'var(--main-green-color)',
+      transition: 'all .2s ease',
+   },
 });
