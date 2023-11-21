@@ -27,11 +27,11 @@ function App() {
             <Routes>
                <Route path="/">
                   <Route
+                     index
                      path="/topGames"
                      element={<PrivatRoute redirectTo="/login" component={<MainPage />} />}
                   />
                   <Route
-                     index
                      path="/login"
                      element={<RestrictedRoute redirectTo="/topGames" component={<LoginPage />} />}
                   />
@@ -44,9 +44,8 @@ function App() {
                   <Route path="/*" element={<div>404 Error</div>} />
                </Route>
                <Route
-                  exact
-                  path="/login"
-                  element={<RestrictedRoute redirectTo="/topGames" component={<LoginPage />} />}
+                  index
+                  element={<PrivatRoute redirectTo="/login" component={<MainPage />} />}
                />
             </Routes>
          </Suspense>
