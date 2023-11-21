@@ -10,7 +10,7 @@ export const gameApi = createApi({
          query(params) {
             const body = {
                page: params.page,
-               isFreshGamesFirst: true,
+               isFreshGamesFirst: params.isFreshGamesFirst,
                genre: params.genre,
                gamesToShow: 9,
             };

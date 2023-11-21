@@ -16,6 +16,7 @@ const initialState = {
    ],
    activeItem: 'ALL',
    page: 1,
+   isFreshGamesFirst: false,
 };
 
 const gameSlice = createSlice({
@@ -28,8 +29,12 @@ const gameSlice = createSlice({
       updatePage: (state, action) => {
          state.page = action.payload;
       },
+      updateNewSwitch: (state) => {
+         console.log(!state.changeNew);
+         state.isFreshGamesFirst = !state.isFreshGamesFirst;
+      },
    },
 });
 
-export const { setActiveItem, updatePage } = gameSlice.actions;
+export const { setActiveItem, updatePage, updateNewSwitch } = gameSlice.actions;
 export default gameSlice.reducer;

@@ -5,7 +5,7 @@ export const FilterContainerUl = styled('ul')({
    alignItems: 'center',
    gap: 5,
    flexWrap: 'wrap',
-   maxWidth: '80%',
+   maxWidth: '100%',
    borderBottom: '1px solid #454545',
 });
 
