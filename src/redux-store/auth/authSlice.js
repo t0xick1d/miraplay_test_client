@@ -14,7 +14,8 @@ const authSlice = createSlice({
    initialState,
    extraReducers: {
       [register.fulfilled](state, action) {
-         state.user = action.payload.user;
+         state.user.nickName = action.payload.nickName;
+         state.user.email = action.payload.email;
          state.token = action.payload.token;
          state.isRefreshing = false;
          state.isLoggedIn = true;
@@ -23,7 +24,7 @@ const authSlice = createSlice({
          state.isRefreshing = true;
       },
       [register.rejected](state, action) {
-         state.error = action.message;
+         state.error = action.payload.message;
          state.isRefreshing = false;
       },
       [logIn.fulfilled](state, action) {
