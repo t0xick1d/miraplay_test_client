@@ -23,7 +23,7 @@ function App() {
       <Spiner />
    ) : (
       <AppContainer>
-         <Suspense>
+         <Suspense fallback={<Spiner />}>
             <Routes>
                <Route path="/">
                   <Route
@@ -42,6 +42,11 @@ function App() {
                   />
                   <Route path="/*" element={<div>404 Error</div>} />
                </Route>
+               <Route
+                  exact
+                  path="/login"
+                  element={<RestrictedRoute redirectTo="/topGames" component={<LoginPage />} />}
+               />
             </Routes>
          </Suspense>
       </AppContainer>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import bg from '../../img/head-bg.png';
 
 export const Backgrount = styled('div')`
@@ -86,4 +87,9 @@ export const ButtonSubmit = styled('button')({
       backgroundColor: 'var(--main-green-color)',
       color: '#faf9f7',
    },
+});
+
+export const LinkPage = styled(Link)({
+   padding: 10,
+   color: 'var(--main-green-color)',
 });

@@ -20,34 +20,30 @@ export const GlobalStyles = createGlobalStyle`
   font-weight: 500;
   src: local("NeueMachina Light"),
         local("NeueMachina-Light"),
-        url("fonts/NeueMachina-Light.ttf") format("ttf");
+        url("./fonts/NeueMachina-Light.ttf") format("ttf");
   font-display: swap;
 }
 @font-face {
-  font-family: "NeueMachina";
+  font-family: "NeueMachinaRegular";
   font-style: normal;
   font-weight: 600;
   src: local("NeueMachina Regular"),
         local("NeueMachina-Regular"),
-        url("fonts/NeueMachina-Regular.ttf") format("ttf");
+        url("./fonts/NeueMachina-Regular.ttf") format("ttf");
   font-display: swap;
 }
 @font-face {
-  font-family: "NeueMachina";
+  font-family: "NeueMachinaUltrabold";
   font-style: normal;
   font-weight: 700;
   src: local("NeueMachina Ultrabold"),
         local("NeueMachina-Ultrabold"),
-        url("fonts/NeueMachina-Ultrabold.ttf") format("ttf");
+        url("./fonts/NeueMachina-Ultrabold.ttf") format("ttf");
   font-display: swap;
 }
 
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--main-bg-color);
-  color: var(--main-green-color)
+
 
 }
 

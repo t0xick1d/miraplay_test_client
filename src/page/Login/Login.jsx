@@ -14,6 +14,7 @@ import {
    LabelForm,
    InputForm,
    ButtonSubmit,
+   LinkPage,
 } from './LoginStyled';
 
 const LoginPage = () => {
@@ -89,6 +90,7 @@ const LoginPage = () => {
                {error ? <div style={{ color: 'var(--error-color)' }}>{error}</div> : ''}
                <ButtonSubmit type="submit">Log In</ButtonSubmit>
             </form>
+            <LinkPage to="/register">On registration page</LinkPage>
          </Container>
       </Backgrount>
    );
