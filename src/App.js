@@ -31,6 +31,7 @@ function App() {
                      element={<PrivatRoute redirectTo="/login" component={<MainPage />} />}
                   />
                   <Route
+                     index
                      path="/login"
                      element={<RestrictedRoute redirectTo="/topGames" component={<LoginPage />} />}
                   />
